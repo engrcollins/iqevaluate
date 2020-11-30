@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="%PUBLIC_URL%/iqlogo2.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="An e-Evaluation platform for private and public section "
+    />
+    <meta
+      name="keyword"
+      content="GSE, GMAT, Graduate, Examination, Evaluations"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/iqlogo2.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <title>General Aptitude Evaluations</title>
+    <style>
+      .loading-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .loading-div img {
+        animation-name: rotate;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+      .loading-div .fa {
+        font-size: 50px;
+        animation-name: spinWheel;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        color: crimson;
+      }
+
+      @keyframes spinWheel {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="loading-div">
+        <!-- <img src="./iqlogo2.png" alt="iq-evaluate" aria-hidden="true" /> -->
+        <i class="fa fa-asterisk"></i>
+        <p>Please wait...</p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

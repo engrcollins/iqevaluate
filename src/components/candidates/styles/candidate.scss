@@ -1,0 +1,124 @@
+$primaryColor: #280b0b;
+$offWhite: #e3edf7;
+$secondaryColor: #db7e01;
+$facebook: #3b5999;
+$twitter: #55aecc;
+$youtube: #dd4b39;
+$linkedin: #0077bf;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+//Header//
+.header-candidate {
+  display: flex;
+  justify-content: space-between;
+  .timer-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .start {
+      background-color: $secondaryColor;
+      color: white;
+      width: 150px;
+    }
+    .end {
+      background-color: $youtube;
+      color: white;
+      width: 150px;
+    }
+  }
+}
+.counter-span-candidate {
+  font-size: 36px;
+}
+.counter-div-candidate {
+  border: 1px solid #121212;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+}
+.gmat-img-div-flex {
+  .option-label {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header-candidate {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+
+    .timer-cta {
+      .start,
+      .end {
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+///question display
+.candidate-question-display-div {
+  .dangerous-html {
+    display: flex;
+    justify-content: start;
+    height: fit-content;
+    width: fit-content;
+    p {
+      text-justify: inter-word;
+      text-align: justify;
+    }
+    figure {
+      // width: 300px;
+    }
+    table {
+      min-width: 600px;
+      thead {
+        border-bottom: 2px solid black;
+        background: #121212;
+        color: white;
+        font-size: larger;
+      }
+      tr,
+      td {
+        border: 1px solid black;
+      }
+      td {
+        padding: 7px 5px;
+      }
+      thead tr th {
+        padding: 10px;
+      }
+    }
+  }
+
+  .page-numbers {
+    transform: translateY(+15%);
+  }
+
+  .pagination-for-mobile-div {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    .pointer-disable {
+      pointer-events: none;
+    }
+  }
+  .option-label {
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .candidate-question-display-div {
+    .pagination-for-mobile-div {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .candidate-question-display-div {
+    .pagination-web,
+    .page-numbers {
+      display: none;
+    }
+  }
+}
